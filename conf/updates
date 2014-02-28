@@ -1,0 +1,13 @@
+Name: precise-ppa
+Method: http://ppa.launchpad.net/udienz/bpo/ubuntu/
+Suite: precise
+Components: main
+VerifyRelease: blindtrust
+Architectures: source
+
+Name: precise-sabily
+Method: http://ppa.launchpad.net/sabily.team/ppa/ubuntu
+Suite: precise
+Components: main
+VerifyRelease: blindtrust
+Architectures: source

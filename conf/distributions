@@ -1,0 +1,20 @@
+Origin: Ubuntu
+Codename: precise
+Label: Precise Backports
+Version: 12.04
+Architectures: amd64 i386 source
+Components: main non-free
+UdebComponents: main non-free
+Description: Precise backports by Mahyuddin
+DebIndices: Packages Release . .gz .bz2
+DscIndices: Sources Release .gz .bz2
+Tracking: all includechanges
+Contents: udebs nodebs . .gz .bz2
+ContentsArchitectures: i386 amd64
+ContentsComponents: main non-free
+ContentsUComponents: main non-free
+Update: precise-sabily
+SignWith: 90B36C5B
+Log: precise.log
+ --type=dsc changelogs
+#  --changes bin/upload_log

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+repopath="/srv/buildd/repo"
+
+#reprepro -b $repopath build-needing precise-ma-cross armel | awk '{print $1,$2,"1 precise-ma-cross armel"}'
+reprepro -b $repopath build-needing precise all | awk '{print $1,$2,"1 precise"}'

@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+repopath="/srv/buildd/repo"
+
+reprepro -b $repopath build-needing precise all | awk '{print $1,$2,"1 precise"}' | sudo rebuildd-job add

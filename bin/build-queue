@@ -1,0 +1,48 @@
+#!/bin/bash
+
+set -x
+
+#apt-get -q --download-only -t ${d} source ${p}=${v}
+suite=precise
+repobase=/srv/buildd/repo/
+listpkg=$(mktemp)
+incoming=/srv/buildd/incoming/$suite
+ARCH="amd64 i386"
+
+prosess_incoming ()
+{
+	sudo reprepro -V -b /srv/buildd/repo/ processincoming $1
+	sudo chown udienz.udienz /srv/buildd/www/ -R
+}
+repo_buildneed ()
+{
+	reprepro -V -b $repobase build-needing $suite $1 
+}
+
+build_pkg ()
+{
+cat $listpkg  | sort -u |  while read paket versi alamat
+        do
+        cd $incoming/
+                sbuild -n --arch=$1 -d $2-$1 $3 /srv/buildd/www/ubuntu/$alamat > /srv/buildd/www/incoming/log/"$paket"_"$versi"-"$2"-"$1".txt
+        done
+}
+
+for arch in $ARCH
+	do
+	if [ $arch == amd64 ]; then
+			prosess_incoming $suite
+			repo_buildneed $arch > $listpkg
+			repo_buildneed all >> $listpkg
+			ARCH_SBUILD_OPTS="-A"
+			# build_pkg $sbuild_opts --arch
+			build_pkg $arch $suite "$ARCH_SBUILD_OPTS"
+		else
+			prosess_incoming $suite
+			repo_buildneed $arch > $listpkg
+			ARCH_SBUILD_OPTS="--no-arch-all"
+			build_pkg $arch $suite "$ARCH_SBUILD_OPTS"
+		fi
+	done
+
+prosess_incoming $suite
