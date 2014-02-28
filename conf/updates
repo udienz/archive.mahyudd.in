@@ -19,3 +19,16 @@ Components: main
 VerifyRelease: blindtrust
 Architectures: source
 
+Name: precise-partner
+Method: http://archive.canonical.com/ubuntu/
+Suite: precise
+Components: main
+VerifyRelease: blindtrust
+Architectures: source
+
+Name: precise-vlc
+Method: http://ppa.launchpad.net/libreoffice/ppa/ubuntu
+Suite: precise
+Components: main
+VerifyRelease: blindtrust
+Architectures: source
