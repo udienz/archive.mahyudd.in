@@ -13,7 +13,7 @@ Contents: udebs nodebs . .gz .bz2
 ContentsArchitectures: i386 amd64
 ContentsComponents: main non-free
 ContentsUComponents: main non-free
-Update: precise-sabily
+Update: precise-sabily precise-vlc
 SignWith: 90B36C5B
 Log: precise.log
  --type=dsc changelogs

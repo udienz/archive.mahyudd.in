@@ -3,6 +3,5 @@
 buildpath=/srv/buildd
 
 #echo "*** update local repositories with current source ***"
+
 reprepro -b $buildpath/repo/ update precise
-/srv/buildd/repo/bin/build-queue-amd64
-/srv/buildd/repo/bin/build-queue-i386

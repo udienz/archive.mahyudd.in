@@ -11,3 +11,11 @@ Suite: precise
 Components: main
 VerifyRelease: blindtrust
 Architectures: source
+
+Name: precise-vlc
+Method: http://ppa.launchpad.net/videolan/stable-daily/ubuntu
+Suite: precise
+Components: main
+VerifyRelease: blindtrust
+Architectures: source
+
