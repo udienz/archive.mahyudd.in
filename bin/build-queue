@@ -41,11 +41,13 @@ for arch in $ARCH
 			ARCH_SBUILD_OPTS="-A"
 			# build_pkg $sbuild_opts --arch
 			build_pkg $arch $suite "$ARCH_SBUILD_OPTS"
+			rm -f $listpkg
 		else
 			prosess_incoming $suite
 			repo_buildneed $arch > $listpkg
 			ARCH_SBUILD_OPTS="--no-arch-all"
 			build_pkg $arch $suite "$ARCH_SBUILD_OPTS"
+			rm -f $listpkg
 		fi
 	done
 
