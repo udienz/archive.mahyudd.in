@@ -1,0 +1,15 @@
+<h2>Personal Package Archive</h2>
+<hr>
+
+<h3>About</h3>
+<p>
+This is personal package from Mahyuddin Susanto, you can safely use this archive
+</p>
+
+<h3>How to Build?</h3>
+<code>git clone https://github.com/udienz/archive.mahyudd.in</code>
+
+<h3>How to use?</h3>
+<pre>wget http://archive.mahyudd.in/ubuntu/pool/main/u/udienz-keyring/udienz-keyring_2014.02.28.1ubuntu1_all.deb
+sudo dpkg -i udienz-keyring_2014.02.28.1ubuntu1_all.deb
+sudo apt-get update</pre>
