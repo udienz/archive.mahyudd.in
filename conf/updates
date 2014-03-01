@@ -22,13 +22,21 @@ Architectures: source
 Name: precise-partner
 Method: http://archive.canonical.com/ubuntu/
 Suite: precise
-Components: main
+Components: partner>non-free
 VerifyRelease: blindtrust
 Architectures: source
 
-Name: precise-vlc
+Name: precise-lo
 Method: http://ppa.launchpad.net/libreoffice/ppa/ubuntu
 Suite: precise
 Components: main
 VerifyRelease: blindtrust
 Architectures: source
+
+Name: precise-wine
+Method: http://ppa.launchpad.net/ubuntu-wine/ppa/ubuntu
+Suite: precise
+Components: main
+VerifyRelease: blindtrust
+Architectures: source
+

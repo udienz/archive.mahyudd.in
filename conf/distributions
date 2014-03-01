@@ -3,17 +3,18 @@ Codename: precise
 Label: Precise Backports
 Version: 12.04
 Architectures: amd64 i386 source
-Components: main non-free
-UdebComponents: main non-free
+Components: main non-free contrib
+UdebComponents: main non-free contrib
 Description: Precise backports by Mahyuddin
 DebIndices: Packages Release . .gz .bz2
 DscIndices: Sources Release .gz .bz2
 Tracking: all includechanges
 Contents: udebs nodebs . .gz .bz2
 ContentsArchitectures: i386 amd64
-ContentsComponents: main non-free
-ContentsUComponents: main non-free
-Update: precise-sabily precise-vlc precise-lo precise-partner
+ContentsComponents: main non-free contrib
+ContentsUComponents: main non-free contrib
+Update: precise-vlc precise-lo precise-partner
+ precise-ppa precise-wine
 SignWith: 90B36C5B
 Log: precise.log
  --type=dsc changelogs
