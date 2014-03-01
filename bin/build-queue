@@ -3,16 +3,19 @@
 set -x
 
 #apt-get -q --download-only -t ${d} source ${p}=${v}
+BASE=/srv/buildd
 suite=precise
-repobase=/srv/buildd/repo/
+repobase=$BASE/repo/
 listpkg=$(mktemp)
-incoming=/srv/buildd/incoming/$suite
+incoming=$BASE/incoming/$suite
 ARCH="amd64 i386"
+LOCK=$BASE/lockbuild
 
 prosess_incoming ()
 {
-	sudo reprepro -V -b /srv/buildd/repo/ processincoming $1
-	sudo chown udienz.udienz /srv/buildd/www/ -R
+	sudo reprepro -V -b $BASE/repo/ processincoming $1
+	sudo chown udienz.udienz $BASE/www/ -R
+	echo `date` > $BASE/www/ubuntu/project/trace/`hostname -f`
 }
 repo_buildneed ()
 {
@@ -24,9 +27,10 @@ build_pkg ()
 cat $listpkg  | sort -u |  while read paket versi alamat
         do
         cd $incoming/
-                sbuild -n --arch=$1 -d $2-$1 $3 /srv/buildd/www/ubuntu/$alamat > /srv/buildd/www/incoming/log/"$paket"_"$versi"-"$2"-"$1".txt
+                sbuild -n --arch=$1 -d $2-$1 $3 $BASE/www/ubuntu/$alamat > $BASE/incoming/log/"$paket"_"$versi"-"$2"-"$1".txt
         done
 }
+
 
 for arch in $ARCH
 	do
