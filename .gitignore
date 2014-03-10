@@ -1,3 +1,5 @@
 db/
+log
 logs/
 lists/
+bin/withlock

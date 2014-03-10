@@ -4,4 +4,25 @@ Allow: unstable->precise
 Default: precise
 TempDir: /tmp
 Cleanup: unused_files
-Permit: unused_files
+Permit: unused_files older_version
+
+Name: raring
+IncomingDir: /srv/buildd/incoming/raring
+Default: raring
+TempDir: /tmp
+Cleanup: unused_files
+Permit: unused_files older_version
+
+Name: saucy
+IncomingDir: /srv/buildd/incoming/saucy
+Default: saucy
+TempDir: /tmp
+Cleanup: unused_files
+Permit: unused_files older_version
+
+Name: trusty
+IncomingDir: /srv/buildd/incoming/trusty
+Default: trusty
+TempDir: /tmp
+Cleanup: unused_files
+Permit: unused_files older_version

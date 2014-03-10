@@ -14,8 +14,94 @@ ContentsArchitectures: i386 amd64
 ContentsComponents: main non-free contrib
 ContentsUComponents: main non-free contrib
 Update: precise-vlc precise-lo precise-partner
- precise-ppa precise-wine
+ precise-wine
 SignWith: 90B36C5B
+DebOverride: override.precise
+UDebOverride: override.precise
+DscOverride: override.precise
+ByhandHooks:
+ * * * email-notif.sh
 Log: precise.log
- --type=dsc changelogs
-#  --changes bin/upload_log
+ --type=dsc /srv/buildd/bin/changelogs
+ /srv/buildd/bin/email-dsc.sh
+ --changes /srv/buildd/bin/ubuntu-email-changes.sh
+
+Origin: Ubuntu 
+Codename: trusty 
+Label: Trusty Backports 
+Version: 14.04 
+Architectures: amd64 i386 source 
+Components: main non-free contrib 
+UdebComponents: main non-free contrib 
+Description: Trusty backports by Mahyuddin 
+DebIndices: Packages Release . .gz .bz2 
+DscIndices: Sources Release .gz .bz2 
+Tracking: all includechanges 
+Contents: udebs nodebs . .gz .bz2 
+ContentsArchitectures: i386 amd64 
+ContentsComponents: main non-free contrib 
+ContentsUComponents: main non-free contrib 
+Update: trusty-vlc trusty-lo trusty-partner 
+ trusty-wine 
+SignWith: 90B36C5B 
+DebOverride: override.trusty 
+UDebOverride: override.trusty 
+DscOverride: override.trusty 
+ByhandHooks: 
+ * * * email-notif.sh 
+Log: trusty.log 
+ --type=dsc /srv/buildd/bin/changelogs
+ /srv/buildd/bin/email-dsc.sh 
+ --changes /srv/buildd/bin/ubuntu-email-changes.sh
+
+Origin: Ubuntu 
+Codename: saucy 
+Label: Saucy Backports 
+Version: 14.04 
+Architectures: amd64 i386 source 
+Components: main non-free contrib 
+UdebComponents: main non-free contrib 
+Description: Saucy backports by Mahyuddin 
+DebIndices: Packages Release . .gz .bz2 
+DscIndices: Sources Release .gz .bz2 
+Tracking: all includechanges 
+Contents: udebs nodebs . .gz .bz2 
+ContentsArchitectures: i386 amd64 
+ContentsComponents: main non-free contrib 
+ContentsUComponents: main non-free contrib 
+SignWith: 90B36C5B 
+DebOverride: override.saucy 
+UDebOverride: override.saucy 
+DscOverride: override.saucy 
+ByhandHooks: 
+ * * * email-notif.sh 
+Log: saucy.log 
+ --type=dsc /srv/buildd/bin/changelogs
+ /srv/buildd/bin/email-dsc.sh 
+ --changes /srv/buildd/bin/ubuntu-email-changes.sh
+
+Origin: Ubuntu 
+Codename: raring 
+Label: Raring Backports 
+Version: 14.04 
+Architectures: amd64 i386 source 
+Components: main non-free contrib 
+UdebComponents: main non-free contrib 
+Description: Raring backports by Mahyuddin 
+DebIndices: Packages Release . .gz .bz2 
+DscIndices: Sources Release .gz .bz2 
+Tracking: all includechanges 
+Contents: udebs nodebs . .gz .bz2 
+ContentsArchitectures: i386 amd64 
+ContentsComponents: main non-free contrib 
+ContentsUComponents: main non-free contrib 
+SignWith: 90B36C5B 
+DebOverride: override.raring 
+UDebOverride: override.raring 
+DscOverride: override.raring 
+ByhandHooks: 
+ * * * email-notif.sh 
+Log: raring.log 
+ --type=dsc /srv/buildd/bin/changelogs
+ /srv/buildd/bin/email-dsc.sh 
+ --changes /srv/buildd/bin/ubuntu-email-changes.sh

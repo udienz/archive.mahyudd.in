@@ -1,15 +1,9 @@
-Name: precise-ppa
-Method: http://ppa.launchpad.net/udienz/bpo/ubuntu/
-Suite: precise
-Components: main
-VerifyRelease: blindtrust
-Architectures: source
-
 Name: precise-sabily
 Method: http://ppa.launchpad.net/sabily.team/ppa/ubuntu
 Suite: precise
 Components: main
 VerifyRelease: blindtrust
+FilterList: purge blacklist.precise
 Architectures: source
 
 Name: precise-vlc
@@ -17,13 +11,15 @@ Method: http://ppa.launchpad.net/videolan/stable-daily/ubuntu
 Suite: precise
 Components: main
 VerifyRelease: blindtrust
+FilterList: purge blacklist.precise
 Architectures: source
 
 Name: precise-partner
-Method: http://archive.canonical.com/ubuntu/
+Method: http://buaya.klas.or.id/pub/archive.canonical.com/
 Suite: precise
 Components: partner>non-free
 VerifyRelease: blindtrust
+FilterList: purge blacklist.precise
 Architectures: source
 
 Name: precise-lo
@@ -31,6 +27,7 @@ Method: http://ppa.launchpad.net/libreoffice/ppa/ubuntu
 Suite: precise
 Components: main
 VerifyRelease: blindtrust
+FilterList: purge blacklist.precise
 Architectures: source
 
 Name: precise-wine
@@ -38,5 +35,62 @@ Method: http://ppa.launchpad.net/ubuntu-wine/ppa/ubuntu
 Suite: precise
 Components: main
 VerifyRelease: blindtrust
+Architectures: source
+FilterList: purge blacklist.precise
+
+Name: precise-ppa
+Method: http://ppa.launchpad.net/udienz/bpo/ubuntu/
+Suite: precise
+Components: main
+VerifyRelease: blindtrust
+FilterList: purge blacklist.precise
+Architectures: source
+
+Name: trusty-sabily
+Method: http://ppa.launchpad.net/sabily.team/ppa/ubuntu
+Suite: trusty
+Components: main
+VerifyRelease: blindtrust
+FilterList: purge blacklist.trusty
+Architectures: source
+
+Name: trusty-vlc
+Method: http://ppa.launchpad.net/videolan/stable-daily/ubuntu
+Suite: trusty
+Components: main
+VerifyRelease: blindtrust
+FilterList: purge blacklist.trusty
+Architectures: source
+
+Name: trusty-partner
+Method: http://buaya.klas.or.id/pub/archive.canonical.com/
+Suite: trusty
+Components: partner>non-free
+VerifyRelease: blindtrust
+FilterList: purge blacklist.trusty
+Architectures: source
+
+Name: trusty-lo
+Method: http://ppa.launchpad.net/libreoffice/ppa/ubuntu
+Suite: trusty
+Components: main
+VerifyRelease: blindtrust
+FilterList: purge blacklist.trusty
+Architectures: source
+
+Name: trusty-wine
+Method: http://ppa.launchpad.net/ubuntu-wine/ppa/ubuntu
+Suite: trusty
+Components: main
+VerifyRelease: blindtrust
+Architectures: source
+FilterList: purge blacklist.trusty
+
+Name: trusty-ppa
+Method: http://ppa.launchpad.net/udienz/bpo/ubuntu/
+Suite: trusty
+Components: main
+VerifyRelease: blindtrust
+FilterList: purge blacklist.trusty
 Architectures: source
 
